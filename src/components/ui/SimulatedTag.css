@@ -1,0 +1,31 @@
+.simulated-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  background: rgba(127, 140, 141, 0.12);
+  border: 1px solid rgba(127, 140, 141, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-simulated);
+  text-transform: uppercase;
+  font-family: var(--font-mono, monospace);
+}
+.simulated-tag__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-simulated);
+  opacity: 0.7;
+}
+.simulated-tag__channel {
+  color: var(--color-text-secondary);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+}
+.simulated-tag--small {
+  padding: 1px 6px;
+  font-size: 0.6rem;
+}

@@ -1,0 +1,68 @@
+/* ══════════════════════════════════════════════════════
+   StateBadge — Premium
+   ══════════════════════════════════════════════════════ */
+.state-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 11px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+/* Dot inside badge */
+.state-badge .dot {
+  width: 6px;
+  height: 6px;
+}
+
+/* State variants */
+.badge-state--pending {
+  background: rgba(100,116,139,0.12);
+  color: #94a3b8;
+  border-color: rgba(100,116,139,0.22);
+}
+.badge-state--pending .dot { background: #94a3b8; }
+
+.badge-state--tier1 {
+  background: rgba(245,158,11,0.12);
+  color: var(--color-warning-light);
+  border-color: var(--color-warning-border);
+}
+.badge-state--tier1 .dot { background: var(--color-warning-light); }
+
+.badge-state--tier2 {
+  background: rgba(249,115,22,0.12);
+  color: #fb923c;
+  border-color: rgba(249,115,22,0.25);
+}
+.badge-state--tier2 .dot { background: #fb923c; }
+
+.badge-state--matched {
+  background: rgba(16,185,129,0.12);
+  color: var(--color-success-light);
+  border-color: var(--color-success-border);
+}
+.badge-state--matched .dot { background: var(--color-success-light); }
+
+.badge-state--expired {
+  background: rgba(100,116,139,0.06);
+  color: var(--color-text-muted);
+  border-color: rgba(100,116,139,0.12);
+  opacity: 0.7;
+}
+.badge-state--expired .dot { background: var(--color-text-muted); }
+
+.badge-state--cancelled {
+  background: rgba(239,68,68,0.07);
+  color: #f87171;
+  border-color: rgba(239,68,68,0.15);
+  opacity: 0.75;
+}
+.badge-state--cancelled .dot { background: #f87171; }

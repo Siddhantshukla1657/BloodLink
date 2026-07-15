@@ -1,0 +1,67 @@
+/* ══════════════════════════════════════════════════════
+   BloodTypeBadge — Premium
+   ══════════════════════════════════════════════════════ */
+.blood-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  border: 1px solid;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+/* Sizes */
+.bt--sm  { padding: 3px 8px;  font-size: 11px; }
+.bt--md  { padding: 4px 10px; font-size: 13px; }
+.bt--lg  { padding: 6px 14px; font-size: 16px; }
+.bt--xl  { padding: 8px 18px; font-size: 20px; }
+
+/* Drop icon */
+.blood-type-badge__drop {
+  opacity: 0.85;
+}
+
+/* Color variants */
+.bt--o-neg  {
+  background: linear-gradient(135deg, rgba(220,38,38,0.14) 0%, rgba(220,38,38,0.07) 100%);
+  color: #fca5a5;
+  border-color: rgba(220,38,38,0.3);
+}
+.bt--o-pos  {
+  background: linear-gradient(135deg, rgba(239,68,68,0.14) 0%, rgba(239,68,68,0.07) 100%);
+  color: #f87171;
+  border-color: rgba(239,68,68,0.28);
+}
+.bt--a-neg  {
+  background: linear-gradient(135deg, rgba(245,158,11,0.14) 0%, rgba(245,158,11,0.07) 100%);
+  color: #fcd34d;
+  border-color: rgba(245,158,11,0.28);
+}
+.bt--a-pos  {
+  background: linear-gradient(135deg, rgba(251,191,36,0.14) 0%, rgba(251,191,36,0.07) 100%);
+  color: #fbbf24;
+  border-color: rgba(251,191,36,0.28);
+}
+.bt--b-neg  {
+  background: linear-gradient(135deg, rgba(59,130,246,0.14) 0%, rgba(59,130,246,0.07) 100%);
+  color: #93c5fd;
+  border-color: rgba(59,130,246,0.28);
+}
+.bt--b-pos  {
+  background: linear-gradient(135deg, rgba(99,102,241,0.14) 0%, rgba(99,102,241,0.07) 100%);
+  color: #a5b4fc;
+  border-color: rgba(99,102,241,0.28);
+}
+.bt--ab-neg {
+  background: linear-gradient(135deg, rgba(16,185,129,0.14) 0%, rgba(16,185,129,0.07) 100%);
+  color: #6ee7b7;
+  border-color: rgba(16,185,129,0.28);
+}
+.bt--ab-pos {
+  background: linear-gradient(135deg, rgba(52,211,153,0.14) 0%, rgba(52,211,153,0.07) 100%);
+  color: #34d399;
+  border-color: rgba(52,211,153,0.28);
+}

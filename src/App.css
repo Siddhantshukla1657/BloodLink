@@ -1,0 +1,12 @@
+/* App-level overrides — keep minimal */
+
+/* The donor respond page doesn't use the standard layout */
+.app-layout:has(.donor-page) .sidebar {
+  display: none;
+}
+
+/* Ensure donor page fills the full viewport */
+.main-content:has(.donor-page) {
+  margin-left: 0 !important;
+  padding-top: 0 !important;
+}
