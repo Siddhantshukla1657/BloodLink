@@ -1,0 +1,208 @@
+/* ══════════════════════════════════════════════════════
+   Requests List Page — Premium
+   ══════════════════════════════════════════════════════ */
+
+/* ── Page Header ── */
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--sp-7);
+  gap: var(--sp-4);
+}
+.page-header h1 { margin-bottom: var(--sp-2); }
+.page-header p  { color: var(--color-text-muted); font-size: var(--text-base); }
+
+/* ── Filters Card ── */
+.requests-filters {
+  padding: var(--sp-5) var(--sp-6);
+  margin-bottom: var(--sp-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.requests-filters__search {
+  margin-bottom: var(--sp-4);
+  position: relative;
+}
+
+.search-input-wrap {
+  position: relative;
+}
+
+.search-input-wrap .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrap .form-input {
+  padding-left: 42px;
+}
+
+.requests-filters__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+@media (max-width: 640px) {
+  .requests-filters__row { grid-template-columns: 1fr; }
+  .requests-filters { padding: var(--sp-4); }
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+/* ── Results count ── */
+.requests-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--sp-4);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.requests-count__num {
+  font-weight: 800;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Table Container ── */
+.requests-table {
+  padding: 0;
+  overflow-x: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+/* ── Table ── */
+.req-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-base);
+  overflow-x: auto;
+}
+
+.req-table thead {
+  background: linear-gradient(180deg, var(--color-surface-2) 0%, var(--color-surface) 100%);
+}
+
+.req-table th {
+  padding: var(--sp-4) var(--sp-5);
+  text-align: left;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-faint);
+  font-weight: 800;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  background: var(--color-surface-2);
+}
+
+.req-table td {
+  padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid var(--color-border-soft);
+  color: var(--color-text-secondary);
+  vertical-align: middle;
+  transition: background var(--transition-instant);
+}
+
+.req-row { transition: all var(--transition-instant); }
+.req-row:last-child td { border-bottom: none; }
+.req-row:hover td   { background: rgba(255,255,255,0.025); }
+
+.req-table__id {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint) !important;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.req-table__hospital {
+  font-weight: 600;
+  color: var(--color-text-primary) !important;
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.req-table__urgency {
+  text-transform: capitalize;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.req-table__condition {
+  color: var(--color-text-muted) !important;
+  font-size: var(--text-sm);
+  max-width: 200px;
+}
+
+.req-table__donors {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-muted) !important;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.req-table__time {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted) !important;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.req-table__action { white-space: nowrap; }
+
+/* View button within table */
+.req-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+.req-view-btn:hover {
+  color: var(--color-primary-light);
+  border-color: rgba(224,32,32,0.35);
+  background: rgba(224,32,32,0.06);
+}
+
+/* ── Mobile table ── */
+@media (max-width: 768px) {
+  .req-table__condition,
+  .req-table__donors { display: none; }
+}
+@media (max-width: 580px) {
+  .req-table__hospital { max-width: 120px; }
+}
